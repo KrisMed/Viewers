@@ -31,8 +31,8 @@ WORKDIR /usr/src/app
 ENV REACT_APP_CONFIG=config/docker_openresty-orthanc.js
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-COPY ../package.json /usr/src/app/package.json
-COPY ../yarn.lock /usr/src/app/yarn.lock
+COPY ./package.json /usr/src/app/package.json
+COPY ./yarn.lock /usr/src/app/yarn.lock
 
 ADD . /usr/src/app/
 RUN ls -l
